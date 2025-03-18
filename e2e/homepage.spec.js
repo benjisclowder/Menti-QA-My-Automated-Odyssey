@@ -1,6 +1,6 @@
 const { test, expect } = require('@playwright/test');
 
-test.only('Verify homepage loads correctly', async ({ page }) => {
+test('Verify homepage loads correctly', async ({ page }) => {
   await page.goto('https://opensea.io');
   await expect(page).toHaveTitle(/OpenSea/i);
 });
