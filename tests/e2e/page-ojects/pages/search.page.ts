@@ -1,5 +1,3 @@
-// ✅ Project: Menti-QA-My-Automated-Odyssey
-// 📂 File: tests/e2e/pages/SearchPage.ts
 import { Page } from '@playwright/test';
 
 export class SearchPage {
@@ -24,4 +22,4 @@ export class SearchPage {
     await this.page.waitForSelector(this.firstResult);
     await this.page.click(this.firstResult);
   }
-}
+} 
