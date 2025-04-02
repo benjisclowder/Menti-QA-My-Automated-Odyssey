@@ -1,12 +1,13 @@
 {
   "name": "menti-qa-my-automated-odyssey",
   "version": "1.0.0",
-  "description": "This public repository is my personal project and testbed for automating test scenarios. As part of my journey into QA automation and my engineering mentorship program, I’m using this repository to experiment with various testing frameworks, tools, and strategies.",
+  "description": "This public repository is my personal project and testbed for automating test scenarios. As part of my journey into QA automation and my engineering mentorship program, I'm using this repository to experiment with various testing frameworks, tools, and strategies.",
   "main": "index.js",
   "scripts": {
     "test": "npx playwright test",
     "test:headed": "npx playwright test --headed",
-    "test:debug": "npx playwright test --debug"
+    "test:debug": "npx playwright test --debug",
+    "type-check": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,7 @@
   "homepage": "https://github.com/benjisclowder/Menti-QA-My-Automated-Odyssey#readme",
   "devDependencies": {
     "@playwright/test": "^1.51.1",
-    "@types/node": "^22.13.10"
+    "@types/node": "^22.13.10",
+    "typescript": "^5.3.3"
   }
 }
