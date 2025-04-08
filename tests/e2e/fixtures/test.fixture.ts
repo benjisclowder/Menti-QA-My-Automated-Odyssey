@@ -1,5 +1,5 @@
 import { test as base, expect, Page } from '@playwright/test';
-import { SearchPage } from '../page-ojects/pages/search.page';
+import { SearchPage } from '../page-ojects/pages/example.search.page';
 
 // Declare the types of your fixtures
 type Fixtures = {

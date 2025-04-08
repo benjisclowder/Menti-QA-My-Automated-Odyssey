@@ -1,0 +1,20 @@
+name: Print MetaMask Version 12.15.0
+
+on:
+  issues:
+    types: [labeled]
+
+jobs:
+  print-version:
+    # The workflow triggers when an issue is labeled with 'print-version'
+    if: contains(github.event.issue.labels.*.name, 'print-version')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get MetaMask version 12.15.0
+        run: |
+          # Make the curl request and capture the JSON response for specific version
+          response=$(curl --silent https://api.github.com/repos/MetaMask/metamask-extension/releases/tags/v12.15.0)
+          # Use jq to extract the "name" field from the JSON (version number)
+          version=$(echo "$response" | jq -r '.name') 
+          # Print the version
+          echo "MetaMask Version 12.15.0: $version"

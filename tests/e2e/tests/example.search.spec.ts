@@ -1,5 +1,5 @@
 import { test, expect } from '@playwright/test';
-import { SearchPage } from '../page-ojects/pages/search.page';
+import { SearchPage } from '../page-ojects/pages/example.search.page';
 
 test('search for "cats" on OpenSea and open the first result', async ({ page }) => {
   const searchPage = new SearchPage(page);
