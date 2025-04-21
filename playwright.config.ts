@@ -30,6 +30,24 @@ export default defineConfig({
 
     /* Collect trace when retrying the failed test. See https://playwright.dev/docs/trace-viewer */
     trace: 'on-first-retry',
+    
+    /* Add user agent to appear more like a regular browser */
+    userAgent: 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36',
+    
+    /* Add viewport size */
+    viewport: { width: 1280, height: 720 },
+    
+    /* Add geolocation to appear more like a regular user */
+    geolocation: { longitude: -122.084, latitude: 37.422 },
+    
+    /* Add permissions */
+    permissions: ['geolocation'],
+    
+    /* Add extra HTTP headers */
+    extraHTTPHeaders: {
+      'Accept-Language': 'en-US,en;q=0.9',
+      'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
+    },
   },
 
   /* Configure projects for major browsers */
