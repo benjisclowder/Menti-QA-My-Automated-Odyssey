@@ -87,7 +87,7 @@ console.log(fruits[0]); // Outputs: apple
 let counter = 0;
 counter = counter + 1; // This is allowed with let
 
-for (let i = 0; i < 5; i++) { // Common use in loops
+for (let i = 0; i < 5; i++) { // (initialization, condition, iteration)
     console.log(i);
 }
 
