@@ -48,6 +48,13 @@ export default defineConfig({
       'Accept-Language': 'en-US,en;q=0.9',
       'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8',
     },
+    
+    /* Increase timeouts for CI environment */
+    navigationTimeout: 30000,
+    actionTimeout: 15000,
+    
+    /* Add screenshot on failure */
+    screenshot: 'only-on-failure',
   },
 
   /* Configure projects for major browsers */
