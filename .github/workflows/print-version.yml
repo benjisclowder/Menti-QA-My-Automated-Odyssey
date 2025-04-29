@@ -13,7 +13,7 @@ jobs:
       - name: Get MetaMask version 12.15.0
         run: |
           # Make the curl request and capture the JSON response for specific version
-          response=$(curl --silent https://api.github.com/repos/MetaMask/metamask-extension/releases/tags/v12.15.0)
+          response=$(curl https://api.github.com/repos/MetaMask/metamask-extension/releases/tags/v12.15.0)
           # Use jq to extract the "name" field from the JSON (version number)
           version=$(echo "$response" | jq -r '.name') 
           # Print the version
